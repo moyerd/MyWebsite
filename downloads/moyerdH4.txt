@@ -1,0 +1,45 @@
+/*Moyer Dylan 4*/
+use vbvideo
+/*1*/
+select UPPER(StudioName) As StudioName, SUBSTRING(Phone,5) AS PhoneNumber
+from studio;
+use books
+/*2*/
+select concat(Lastname, ', ',Firstname) AS FullName, Customernum, IfNull(Referred,'NOT REFERRED') AS Referred
+from Customers;
+use lyric
+/*3*/
+select CONCAT(LEFT(FirstName,1),', ',LEFT(LastName,1)) AS 'First & Last Initial'
+from members;
+use books
+/*4*/
+select Title, CONCAT(Round(((Retail-Cost)/cost)*100), '%') AS 'Markup'
+from books;
+/*5*/
+select distinct date_format(now(),'%W, %D day of %M in the year %Y at %l:%i%p') AS 'Current Date and Time';
+use vbauto
+/*6*/
+select LName as 'LastName', ModelName, format(CostValue,2) as 'VehicleValue'
+from Customer, Vehicle
+where InventoryIDNumber = InventoryID;
+use books
+/*7*/
+select distinct length(ISBN) AS 'Length of ISBN'
+from books;
+/*8*/
+select OrderDate, IfNull(Shipdate,'NOT SHIPPED') AS 'ShipDate',
+IfNull(DateDiff(Shipdate,OrderDate),'NOT SHIPPED')AS 'Number of days to Ship',
+Date_Add(OrderDate,INTERVAL 60 DAY) AS 'Payment Due'
+from orders;
+
+use lyric
+/*9*/
+select ArtistName, WebAddress, SUBSTRING_INDEX(WebAddress,'.',-2) AS 'WebAddress Without www.'
+from Artists
+where webaddress is not null
+and webaddress != '';
+
+/*10*/
+select EMail, locate('@',Email) AS 'Position of @'
+from members
+where Email is not null;

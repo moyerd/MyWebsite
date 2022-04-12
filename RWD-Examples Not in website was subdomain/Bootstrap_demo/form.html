@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>Bootstrap Demo, Form</title>
+	<!-- Favicons - http://realfavicongenerator.net/ -->
+	<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+	<link rel="manifest" href="images/site.webmanifest">
+	<meta name="msapplication-TileColor" content="#b91d47">
+	<meta name="theme-color" content="#ffffff">
+	<!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+	<link rel="stylesheet" href="styles/main.css" type="text/css">
+	<!-- jQuery - Grab from a CDN and if not available grab a local copy -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- local fallback in case the CDN is down -->
+    <script>
+      window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')
+    </script>
+    <!-- Bootstrap core JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+	<script src="js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+	<header id="Header" class="container-fluid">
+		<!-- If you need sticky-top to work in lower versions of IE https://github.com/filamentgroup/fixed-sticky -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+        <!-- One of the primary actions on mobile is to call a business - This displays a phone button on mobile only -->
+		<!-- NAVBAR -->
+        <div class="navbar-toggler-right">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+
+        <a class="navbar-brand" href="index.html">
+		<img src="images/bbq-icon.svg" width="25" height="25" class="d-inline-block align-top" alt="BBQ Icon">
+            <span class="">Best BBQ Sauce </span>
+        </a>
+        
+        <div class="collapse navbar-collapse" id="navbar">
+            <nav class="nav d-flex flex-column flex-md-row w-100 justify-content-end">
+				<li class="nav-item">
+                <a class="flex-fill text-center text-light nav-link" href="index.html">Home</a>
+				</li>
+				<li class="nav-item">
+				<a class="flex-fill text-center text-light nav-link" href="price.html">Prices</a>
+				</li>
+				<li class="nav-item active">
+                <a class="flex-fill text-center text-light nav-link" href="form.html">Contact</a>
+				</li>
+            </nav>
+        </div>
+    </nav>
+	</header>
+	
+	<main id="Main" class="container-fluid">
+		<!-- JUMBOTRON -->
+		<div class="jumbotron text-center">
+			<h3>Contact Us</h3>
+			<h6>We want to hear from you</h6>
+		</div>
+</main>
+	<!-- FORM -->
+               <form id="Form" class="container-fluid">
+                       <div class="form-group">
+                            <label for="firstname">First Name</label>
+                            <input type="text" class="form-control bg-faded-4" id="name" placeholder="Enter First Name">
+                       </div>
+					   <div class="form-group">
+                            <label for="lastname">Last Name</label>
+                            <input type="text" class="form-control bg-faded-4" id="name" placeholder="Enter Last Name">
+                       </div>
+                       <div class="form-group">
+                            <label for="email">Email</label>
+                            <input class="form-control bg-faded-4" type="email" value="" id="email" placeholder="Enter Email">
+                       </div>
+                       <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control bg-faded-4" id="message" rows="3" placeholder="Enter Message"></textarea>
+                       </div>
+                       <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="spam">
+                            <label class="custom-control-label" for="spam">I'm not a Robot</label>
+                       </div>
+                            <button type="submit" class="btn btn-primary mt-2">Submit</button>
+							<button type="reset" class="btn btn-secondary mt-2">Reset</button>
+                </form>
+	<!--FOOTER-->
+	<footer id="Footer" class="container-fluid">
+		<hr>
+		<div class="container-fluid text-center">
+			<p>&copy; <a href="#"><strong>Best BBQ Sauce</strong></a> 2019</p>
+		</div>
+		
+	</footer>
+	
+</body>
+</html>

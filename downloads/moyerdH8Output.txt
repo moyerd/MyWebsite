@@ -1,0 +1,132 @@
+mysql> source F:\CPT 242 031\MySQL Lab Assignment 8\moyerdH08.sql
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+Database changed
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.11 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.08 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.08 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.06 sec)
+
+Query OK, 0 rows affected (0.05 sec)
+
+Query OK, 0 rows affected (0.05 sec)
+
+Query OK, 0 rows affected (0.05 sec)
+
+Query OK, 0 rows affected (0.20 sec)
+
+Query OK, 0 rows affected (0.17 sec)
+
+Query OK, 0 rows affected (0.16 sec)
+
+Query OK, 0 rows affected (0.20 sec)
+
+Query OK, 0 rows affected (0.11 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.13 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.11 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 1 row affected (0.03 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.03 sec)
+
+Query OK, 1 row affected (0.02 sec)
+
+Query OK, 1 row affected (0.03 sec)
+
+Query OK, 1 row affected (0.02 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.03 sec)
+
+Query OK, 1 row affected (0.02 sec)
+
+Query OK, 1 row affected (0.03 sec)
+
+Query OK, 1 row affected (0.03 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.03 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+Query OK, 1 row affected (0.02 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+Query OK, 1 row affected (0.03 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+Query OK, 1 row affected (0.02 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.03 sec)
+
+Query OK, 1 row affected (0.02 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.03 sec)
+
++--------------+--------+--------------+-----------+
+| custphone    | jobnum | jobstartdate | essn      |
++--------------+--------+--------------+-----------+
+| 803 646-5555 |  11111 | 2017-01-20   | 111111111 |
+| 803 646-5965 |  22222 | 2016-01-09   | 111111111 |
+| 803 646-5555 |  11111 | 2017-01-20   | 222222222 |
+| 803 646-5965 |  22222 | 2016-01-09   | 222222222 |
++--------------+--------+--------------+-----------+
+4 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.03 sec)
+
++-----------------------+
+| SUM(hrsperjob*hrrate) |
++-----------------------+
+|            21560.0350 |
++-----------------------+
+1 row in set (0.00 sec)
+
+mysql> notee

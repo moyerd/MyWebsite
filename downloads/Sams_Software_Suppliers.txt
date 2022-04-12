@@ -1,0 +1,38 @@
+Dylan Moyer
+Sam's Software Supplier
+CPT 242 031
+
+1. Tables & PK
+
+employee---PK= empSSN, LName, FName, Street, City, State, Phone, BirthDate, Gender, mgrSSN, StartDate
+
+division(lookUp)---PK= divisionNum, divisionName
+
+department---PK= deptNum, deptName, VP_FName, VP_LName
+
+projects---PK= projectNum, projectName, StartDate, projectDesc
+
+client---PK=clientNum, FName, LName, Street, City, State, Phone, BirthDate
+
+2. RELATIONSHIPS
+
+1 employee can work at M departments		F
+1 department can work M employees		T
+1-M parent= department, child= employee
+
+1 employee can work at M divisions		F
+1 division can staff M employee			T
+1-M parent= division, child=employee
+
+1 employee can work on M projects		T
+1 project can be worked on by M employees	T
+M-M 
+Resolve is ---- junction table= WorkProjects
+
+1 division can include M departments		T
+1 department can include M divisions		F
+1-M parent=division, child= department
+
+1 client can request M projects			T
+1 project can be requested by M clients		F
+1-M parent=client, child= department

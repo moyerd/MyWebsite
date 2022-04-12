@@ -1,0 +1,183 @@
+/* the styles for the elements */
+html {
+	background-color: #161726;
+}
+.abutton{
+	padding-bottom:5px;
+
+}
+/* Form Buttons classes */
+.btn-primary {
+	background-color: #59023B;
+    border-color: #59023B;
+}
+
+.btn-primary:hover {
+    background-color: #69043B;
+    border-color: #59023B;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    background-color: #69043B;
+    border-color: #59023B;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgb(105,4,59);
+}
+
+.btn-primary.focus, .btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgb(105,4,59);
+}
+
+/* Accordion */
+.card {
+	background-color: #161726;
+}
+
+.btn-link, .btn-link:hover{
+	color: #E7F2DF;
+
+}
+
+#cardheading{
+	background-color: #59023B;
+}
+
+/* Navbar classes */
+.active>.nav-link {
+    color: #FFF!important;
+}
+
+.navbar {
+	background-color: #69043B;
+	font-size: 115%;
+}
+
+.navbar a {
+	color: #E7F2DF;
+}
+
+.navbar a:hover {
+	color: #FFFFFF;
+	font-style: italic;
+	font-size: 120%;
+}
+
+/* IDS */
+#Body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 110%;
+    width: 95%;
+	max-width: 1280px;
+	background-color: #231E2D;
+	margin: 0 auto;
+	margin-top: 50px;
+	color: #E7F2DF;
+	border: 2px solid #69043B;
+	border-radius: 5px;
+}
+
+#Header, #Main, #Footer {
+	margin: 0;
+	padding: 0;
+}
+
+/* SVG */
+svg {
+	display: block;
+	padding-top: 15px;
+	padding-bottom: 10px;
+	margin: auto;
+	fill: #000000;
+	stroke: #FFFFFF;
+	stroke-width: 5px;
+}
+
+/* Header */
+#Header h1 {
+	text-align: center;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	padding-top: 15px;
+	padding-bottom: 10px;
+}
+
+#Main {
+	clear: left;
+	padding: 10px 20px 10px 20px;
+	
+}
+
+.linkname:link,.linkname:visited{
+	color: #E7F2DF;
+	text-decoration: none;
+	border-bottom: 1px solid #E7F2DF;
+}
+/* mouse over link */
+.linkname:hover {
+	color: #FFFFFF;
+	border-bottom: 2px solid #FFFFFF;
+}
+/* selected link */
+.linkname:active {
+	color: #69043B;
+	border-bottom: 2px solid #69043B;
+}
+
+/* Footer */
+#Footer { 
+	border-top: 1px solid #69043B;
+	padding-top: 15px;
+	color: #E7F2DF;
+}
+
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+*/
+ 
+/* Small devices (landscape phones, 576px and up) */
+@media only screen and (min-width: 576px) {  
+	#Mainimg {
+	height:300px;
+	}
+}
+ 
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media only screen and (min-width: 768px) {  
+	#Mainimg {
+	height:325px;
+	}
+	#Main p {
+	padding-right:5%;
+	padding-left:5%;
+	font-size:105%;
+	}
+}
+ 
+/* Large devices (desktops, 992px and up) */
+@media only screen and (min-width: 992px) { 
+	#Mainimg {
+	height:400px;
+	width:65%;
+	}
+	#Main p {
+	padding-right:10%;
+	padding-left:10%;
+	font-size:110%;
+	}
+}
+ 
+/* Extra large devices (large desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {  
+    #Mainimg {
+	height:500px;
+	}
+	#Main p {
+	padding-right:10%;
+	padding-left:10%;
+	font-size:120%;
+	}
+}
+

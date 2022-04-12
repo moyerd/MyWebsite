@@ -1,0 +1,117 @@
+/* the styles for the elements */
+html {
+	background-color: #161726;
+	
+}
+#Body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 110%;
+    width: 95%;
+	max-width: 1280px;
+	background-color: #231E2D;
+	margin: 0 auto;
+	margin-top: 50px;
+	color: #E7F2DF;
+	border: 2px solid #69043B;
+	border-radius: 5px;
+}
+
+/* Navbar classes */
+.active>.nav-link {
+    color: #FFF!important;
+}
+
+.navbar {
+	background-color: #69043B;
+	font-size: 115%;
+}
+.navbar a {
+	color: #E7F2DF;
+}
+
+.navbar a:hover {
+	color: #FFFFFF;
+	font-style: italic;
+	font-size: 120%;
+}
+
+#Header, #Main, #Footer {
+	margin: 0;
+	padding: 0;
+}
+
+svg {
+	display: block;
+	padding-top: 15px;
+	padding-bottom: 10px;
+	margin: auto;
+	fill: #000000;
+	stroke: #FFFFFF;
+	stroke-width: 5px;
+}
+/* Header */
+#Header h1 {
+	text-align: center;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	padding-top: 15px;
+	padding-bottom: 10px;
+}
+#Main {
+	clear: left;
+	padding: 10px 20px 10px 20px;
+}
+
+/* Footer */
+#Footer { 
+	border-top: 1px solid #69043B;
+	padding-top: 15px;
+	color: #E7F2DF;
+} 
+
+#Main a:link,a:visited{
+	color: #E7F2DF;
+	text-decoration: none;
+	border-bottom: 1px solid #E7F2DF;
+}
+/* mouse over link */
+#Main a:hover {
+	color: #FFFFFF;
+	border-bottom: 2px solid #FFFFFF;
+}
+/* selected link */
+#Main a:active {
+	color: #69043B;
+	border-bottom: 2px solid #69043B;
+}
+
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+*/
+ 
+/* Small devices (landscape phones, 576px and up) */
+@media only screen and (min-width: 576px) {  
+
+}
+ 
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media only screen and (min-width: 768px) {  
+	#Main p {
+	font-size:100%;
+	}
+}
+ 
+/* Large devices (desktops, 992px and up) */
+@media only screen and (min-width: 992px) { 
+	#Main p {
+	font-size:110%;
+	}
+}
+ 
+/* Extra large devices (large desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {  
+	#Main p {
+	font-size:120%;
+	}
+}

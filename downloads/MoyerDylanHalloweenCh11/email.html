@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Moyer Dylan Halloween Store</title>
+	<link rel="stylesheet" href="styles/normalize.css">
+	<link rel="stylesheet" href="styles/main.css">
+	<link href="images/favicon.ico" rel="icon" type="image/x-icon">
+</head>
+
+<body>
+
+  <header>
+  	<img src="images/pumpkin.gif" alt="Pumpkin" width="85">
+   	<h2>The Halloween Store</h2>
+   	<h3>For the little Goblin in all of us!</h3>
+  </header>
+  <nav id="nav_menu">
+  	<ul>
+    	<li><a href="index.html">Home</a></li>
+    	<li><a href="products/productlist.html">Product List</a></li>
+    	<li><a href="personal/index.html">Personal</a></li>
+    	<li><a href="decorating/index.html">Decorating Ideas</a>
+    		<ul>
+    			<li><a href="decorating/outdoor.html">Outdoor</a></li>
+    			<li><a href="decorating/indoor.html">Indoor</a></li>
+    			<li><a href="decorating/table.html">Table</a></li>
+    			<li><a href="decorating/treats.html">Treats</a></li>
+    		</ul>
+    	</li>
+    	<li><a href="email.html" class="current">Join Email</a></li>
+	</ul>
+  </nav>
+  <main>
+	<aside>
+		<nav id="nav_list">
+   		<ul>
+   			<li><a href="products/props.html">Props</a></li>
+   			<li><a href="products/costumes.html">Costumes</a></li>
+   			<li><a href="products/special.html">Special FX</a></li>
+   			<li><a href="products/masks.html">Masks</a></li>
+		</ul>
+		</nav>
+	</aside>
+<section>
+	<h1>Please enter the following information:</h1>
+	<form name="email_form" action="subscribe.html" method="post">
+	<label for="f_name">First name:</label>
+		<input type="text" name="f_name" required autofocus>
+	<label for="l_name">Last name:</label>
+		<input type="text" name="l_name" required>
+	<label for="email">Email:</label>
+		<input type="text" name="email" required>
+	<label for="ZipCode">Zip Code:</label>
+		<input type="text" name="zipc" placeholder="Optional but appreciated: 99999"
+		pattern="\d{5}([\-]\d{4})?">
+	<label for="birthdate">Birth Date:</label>
+		<input type="date" name="Birdate">
+	<label for="gender">Gender:</label>
+		<input type="radio" name="gender" value="male">Male
+		<input type="radio" name="gender" value="male">Female
+	<label for="find_us">How did you find us?</label>
+		<select name="findus">
+		<option value="f">Friend</option>
+		<option value="n">Newspaper</option>
+		<option value="i" selected>Internet</option>
+		<option value="o">Other</option>
+		</select>
+	<label for="shopper">1st Time Shopper?:</label>
+		<input type="checkbox" name="firstshopper" checked>
+	<label for="comments">Comments:</label>
+		<textarea name="comments"> </textarea>
+		<input type="submit" id="submit" value="Subscribe">
+		<input type="reset" id="reset" value="Reset">
+	</form>
+</section>
+  </main>
+
+  <footer>
+	<p>&copy; 2016 Ben Murach</p>
+  </footer>
+</body>
+</html>

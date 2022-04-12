@@ -1,0 +1,71 @@
+/*Moyer Dylan 3*/
+use books;
+/*1*/
+select title,contact,phone
+from books,publisher
+where books.PubID=publisher.PubID;
+/*2*/
+select CONCAT(LastName, ', ',FirstName) as 'Full Name', orderdate, shipdate
+from orders,customers
+where orders.Customernum=customers.Customernum
+AND shipdate is null
+ORDER by orderdate ASC;
+use vbauto;
+/*3*/
+select CONCAT(LName, ', ',FName) as 'Full Name', Manufacturer, ModelName
+from Vehicle, Customer
+where InventoryID=InventoryIDNumber
+and Manufacturer != 'Chevrolet'
+ORDER by Manufacturer, ModelName;
+use books;
+/*4*/
+select distinct CONCAT(LastName, ', ',FirstName) as 'Full Name', title
+from customers, books
+where LastName LIKE "Lucas" 
+and FirstName LIKE "Jake";
+use vbvideo;
+/*5*/
+select title, StudioName, Length
+from Studio, Video
+where Studio.StudioID=Video.StudioID
+ORDER by Length DESC;
+
+use books;
+/*6*/
+select Lname As LastName, Books.ISBN, title
+from books, BookAuthor, Author
+Where Books.ISBN=BookAuthor.ISBN
+AND BookAuthor.AuthorID=Author.AuthorID
+and Lname LIKE "ADAMS";
+
+use employee;
+/*7*/
+select first_name, birth_date, tool_name, purchase_date, CEILING(CONCAT(TO_DAYS(purchase_date) -TO_DAYS(birth_date))/365.25) AS 'Age'
+from tools, employee
+where payroll_number=fk_payroll_number
+AND purchase_date BETWEEN '1966-01-01' and '1990-12-31';
+
+use books;
+/*8*/
+select CONCAT(firstname, ' ', lastname) AS "Buyer's Name", CONCAT(fname, ' ', lastname) AS Author
+from customers c, orders o, orderitems oi, books b, bookauthor ba, author a
+where c.customernum = o.customernum
+and o.ordernum = oi.ordernum
+and oi.ISBN = b.ISBN
+and b.ISBN = ba.ISBN
+and ba.authorID = a.authorID
+and firstname = 'Becca'
+and lastname = 'Nelson';
+
+/*9*/
+select lastname, firstname, ordernum, orderdate
+from Customers LEFT JOIN Orders
+on customers.customernum = orders.customernum;
+
+/*10*/
+select title, ordernum, quantity
+from orderitems LEFT JOIN books
+on orderitems.ISBN = books.ISBN
+where title LIKE '%A%A%'
+order by ordernum;
+

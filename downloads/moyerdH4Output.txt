@@ -1,0 +1,179 @@
+mysql> source C:\Scripts\moyerdH4.sql
+Database changed
++----------------------+-------------+
+| StudioName           | PhoneNumber |
++----------------------+-------------+
+| BRIDES DAY STUDIO    | 899-9999    |
+| COLUMBUS CORPORATION | 564-4444    |
+| WALT DIZZY STUDIOS   | 944-9999    |
+| OREOLE PRODUCTIONS   | 878-7777    |
+| TOUCHTONES STUDIO    | 878-8787    |
++----------------------+-------------+
+5 rows in set (0.00 sec)
+
+Database changed
++-------------------+-------------+--------------+
+| FullName          | Customernum | Referred     |
++-------------------+-------------+--------------+
+| MORALES, BONITA   |        1001 | NOT REFERRED |
+| THOMPSON, RYAN    |        1002 | NOT REFERRED |
+| SMITH, LEILA      |        1003 | NOT REFERRED |
+| PIERSON, THOMAS   |        1004 | NOT REFERRED |
+| GIRARD, CINDY     |        1005 | NOT REFERRED |
+| CRUZ, MESHIA      |        1006 | NOT REFERRED |
+| GIANA, TAMMY      |        1007 | 1003         |
+| JONES, KENNETH    |        1008 | NOT REFERRED |
+| PEREZ, JORGE      |        1009 | 1003         |
+| LUCAS, JAKE       |        1010 | NOT REFERRED |
+| MCGOVERN, REESE   |        1011 | NOT REFERRED |
+| MCKENZIE, WILLIAM |        1012 | NOT REFERRED |
+| NGUYEN, NICHOLAS  |        1013 | 1006         |
+| LEE, JASMINE      |        1014 | NOT REFERRED |
+| SCHELL, STEVE     |        1015 | NOT REFERRED |
+| DAUM, MICHELL     |        1016 | 1010         |
+| NELSON, BECCA     |        1017 | NOT REFERRED |
+| MONTIASA, GREG    |        1018 | NOT REFERRED |
+| SMITH, JENNIFER   |        1019 | 1003         |
+| FALAH, KENNETH    |        1020 | NOT REFERRED |
++-------------------+-------------+--------------+
+20 rows in set (0.00 sec)
+
+Database changed
++----------------------+
+| First & Last Initial |
++----------------------+
+| B, S                 |
+| M, L                 |
+| C, K                 |
+| K, F                 |
+| R, A                 |
+| M, C                 |
+| C, W                 |
+| W, B                 |
+| B, T                 |
+| T, I                 |
+| L, H                 |
+| M, H                 |
+| B, C                 |
+| T, W                 |
+| V, C                 |
+| F, P                 |
+| R, G                 |
+| J, M                 |
+| D, F                 |
+| B, R                 |
+| W, M                 |
+| A, F                 |
+| D, G                 |
++----------------------+
+23 rows in set (0.00 sec)
+
+Database changed
++--------------------------------+--------+
+| Title                          | Markup |
++--------------------------------+--------+
+| HOW TO GET FASTER PIZZA        | 68%    |
+| THE WOK WAY TO COOK            | 51%    |
+| REVENGE OF MICKEY              | 55%    |
+| BODYBUILD IN 10 MINUTES A DAY  | 65%    |
+| HANDCRANKED COMPUTERS          | 15%    |
+| SHORTEST POEMS                 | 83%    |
+| PAINLESS CHILD-REARING         | 87%    |
+| COOKING WITH MUSHROOMS         | 60%    |
+| HOLY GRAIL OF ORACLE           | 61%    |
+| BUILDING A CAR WITH TOOTHPICKS | 59%    |
+| BIG BEAR AND LITTLE DOVE       | 68%    |
+| DATABASE IMPLEMENTATION        | 78%    |
+| HOW TO MANAGE THE MANAGER      | 107%   |
+| E-BUSINESS THE EASY WAY        | 44%    |
++--------------------------------+--------+
+14 rows in set (0.00 sec)
+
++-----------------------------------------------------------+
+| Current Date and Time                                     |
++-----------------------------------------------------------+
+| Tuesday, 18th day of September in the year 2018 at 3:38PM |
++-----------------------------------------------------------+
+1 row in set (0.00 sec)
+
+Database changed
++-----------+-----------+--------------+
+| LastName  | ModelName | VehicleValue |
++-----------+-----------+--------------+
+| Allen     | Suburban  | 15,885.01    |
+| Baldwin   | Suburban  | 15,885.01    |
+| Patterson | Suburban  | 15,885.01    |
+| Baldwin   | Fiero     | 4,290.00     |
+| York      | Fiero     | 4,290.00     |
+| Bittles   | S-10      | 8,950.00     |
+| York      | Regal     | 8,525.08     |
+| Green     | Suburban  | 14,225.62    |
++-----------+-----------+--------------+
+8 rows in set (0.00 sec)
+
+Database changed
++----------------+
+| Length of ISBN |
++----------------+
+|             10 |
++----------------+
+1 row in set (0.00 sec)
+
++------------+-------------+------------------------+-------------+
+| OrderDate  | ShipDate    | Number of days to Ship | Payment Due |
++------------+-------------+------------------------+-------------+
+| 2003-03-31 | 2003-04-02  | 2                      | 2003-05-30  |
+| 2003-03-31 | 2003-04-01  | 1                      | 2003-05-30  |
+| 2003-03-31 | 2003-04-01  | 1                      | 2003-05-30  |
+| 2003-04-01 | 2003-04-01  | 0                      | 2003-05-31  |
+| 2003-04-01 | 2003-04-05  | 4                      | 2003-05-31  |
+| 2003-04-01 | 2003-04-02  | 1                      | 2003-05-31  |
+| 2003-04-01 | 2003-04-02  | 1                      | 2003-05-31  |
+| 2003-04-02 | 2003-04-04  | 2                      | 2003-06-01  |
+| 2003-04-02 | 2003-04-03  | 1                      | 2003-06-01  |
+| 2003-04-03 | 2003-04-05  | 2                      | 2003-06-02  |
+| 2003-04-03 | 2003-04-04  | 1                      | 2003-06-02  |
+| 2003-04-03 | 2003-04-05  | 2                      | 2003-06-02  |
+| 2003-04-03 | NOT SHIPPED | NOT SHIPPED            | 2003-06-02  |
+| 2003-04-03 | 2003-04-04  | 1                      | 2003-06-02  |
+| 2003-04-04 | 2003-04-05  | 1                      | 2003-06-03  |
+| 2003-04-04 | NOT SHIPPED | NOT SHIPPED            | 2003-06-03  |
+| 2003-04-04 | NOT SHIPPED | NOT SHIPPED            | 2003-06-03  |
+| 2003-04-04 | 2003-04-05  | 1                      | 2003-06-03  |
+| 2003-04-05 | NOT SHIPPED | NOT SHIPPED            | 2003-06-04  |
+| 2003-04-05 | NOT SHIPPED | NOT SHIPPED            | 2003-06-04  |
+| 2003-04-05 | NOT SHIPPED | NOT SHIPPED            | 2003-06-04  |
++------------+-------------+------------------------+-------------+
+21 rows in set (0.00 sec)
+
+Database changed
++----------------+--------------------------+-------------------------+
+| ArtistName     | WebAddress               | WebAddress Without www. |
++----------------+--------------------------+-------------------------+
+| The Neurotics  | www.theneurotics.com     | theneurotics.com        |
+| Sonata         | www.classical.com/sonata | classical.com/sonata    |
+| Jose MacArthur | www.josemacarthur.com    | josemacarthur.com       |
+| Today          | www.today.com            | today.com               |
+| 21 West Elm    | www.21westelm.com        | 21westelm.com           |
++----------------+--------------------------+-------------------------+
+5 rows in set (0.00 sec)
+
++------------------------+---------------+
+| EMail                  | Position of @ |
++------------------------+---------------+
+| bs@cookery.com         |             3 |
+| mlambert@corkscrew.com |             9 |
+| ral@mightyhostl.com    |             4 |
+| mjc17@daviscorp.com    |             6 |
+| wbman@uptime.net       |             6 |
+| taffygirl@signon.com   |            10 |
+| twong@tamilla.org      |             6 |
+| jmac@dowop.com         |             5 |
+| fennyd@bitspeed.com    |             7 |
+| wmorrow@wmorrow.com    |             8 |
+| kosmo@ispl.com         |             6 |
+| goody@irvingnet.com    |             6 |
++------------------------+---------------+
+12 rows in set (0.00 sec)
+
+mysql> notee

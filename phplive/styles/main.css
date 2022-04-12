@@ -1,0 +1,62 @@
+/*Programmer: Dylan Moyer
+CPT 240 - Lab 7 rev 2020 Apache-MySQL-PHP
+Lab 7
+*/
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #D6DBDF;
+}
+
+form, dl {
+    margin: 0 auto;
+    width: 40%;
+}
+
+ul {
+    margin: 0 auto;
+    width: 40%;
+    list-style-type: none;
+}
+
+footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+h1, h2 {
+    font-family: "Times New Roman", Times, serif;
+    padding-bottom: 10px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 80%;
+}
+
+.error{
+    font-style:italic;
+    color: red;
+}
+
+.table {
+    margin: 0 auto;
+    width: 70%;
+    background: #FFFFFF;
+}
+
+#buttonform {
+    margin: 0;
+    width: 0;
+}
+
+/* For Delete confirm form */
+.button-container form,
+.button-container form div {
+    display: inline;
+}
+
+.button-container button {
+    display: inline;
+    vertical-align: middle;
+}

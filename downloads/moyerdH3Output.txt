@@ -1,0 +1,183 @@
+mysql> source c:\scripts\moyerdH3.sql
+Database changed
++--------------------------------+-----------------+--------------+
+| title                          | contact         | phone        |
++--------------------------------+-----------------+--------------+
+| REVENGE OF MICKEY              | TOMMIE SEYMOUR  | 000-714-8321 |
+| HOW TO MANAGE THE MANAGER      | TOMMIE SEYMOUR  | 000-714-8321 |
+| BUILDING A CAR WITH TOOTHPICKS | JANE TOMLIN     | 010-410-0010 |
+| E-BUSINESS THE EASY WAY        | JANE TOMLIN     | 010-410-0010 |
+| HANDCRANKED COMPUTERS          | DAVID DAVIDSON  | 800-555-1211 |
+| HOLY GRAIL OF ORACLE           | DAVID DAVIDSON  | 800-555-1211 |
+| DATABASE IMPLEMENTATION        | DAVID DAVIDSON  | 800-555-1211 |
+| HOW TO GET FASTER PIZZA        | RENEE SMITH     | 800-555-9743 |
+| THE WOK WAY TO COOK            | RENEE SMITH     | 800-555-9743 |
+| BODYBUILD IN 10 MINUTES A DAY  | RENEE SMITH     | 800-555-9743 |
+| COOKING WITH MUSHROOMS         | RENEE SMITH     | 800-555-9743 |
+| SHORTEST POEMS                 | SEBASTIA' JONES | 800-555-8284 |
+| PAINLESS CHILD-REARING         | SEBASTIA' JONES | 800-555-8284 |
+| BIG BEAR AND LITTLE DOVE       | SEBASTIA' JONES | 800-555-8284 |
++--------------------------------+-----------------+--------------+
+14 rows in set (0.00 sec)
+
++-----------------+------------+----------+
+| Full Name       | orderdate  | shipdate |
++-----------------+------------+----------+
+| NELSON, BECCA   | 2003-04-03 | NULL     |
+| SMITH, LEILA    | 2003-04-04 | NULL     |
+| FALAH, KENNETH  | 2003-04-04 | NULL     |
+| JONES, KENNETH  | 2003-04-05 | NULL     |
+| MORALES, BONITA | 2003-04-05 | NULL     |
+| MONTIASA, GREG  | 2003-04-05 | NULL     |
++-----------------+------------+----------+
+6 rows in set (0.00 sec)
+
+Database changed
++--------------------+--------------+-----------+
+| Full Name          | Manufacturer | ModelName |
++--------------------+--------------+-----------+
+| York, Janet        | Buick        | Regal     |
+| Baldwin, Josephine | Pontiac      | Fiero     |
+| York, Janet        | Pontiac      | Fiero     |
++--------------------+--------------+-----------+
+3 rows in set (0.00 sec)
+
+Database changed
++-------------+--------------------------------+
+| Full Name   | title                          |
++-------------+--------------------------------+
+| LUCAS, JAKE | HOW TO GET FASTER PIZZA        |
+| LUCAS, JAKE | THE WOK WAY TO COOK            |
+| LUCAS, JAKE | REVENGE OF MICKEY              |
+| LUCAS, JAKE | BODYBUILD IN 10 MINUTES A DAY  |
+| LUCAS, JAKE | HANDCRANKED COMPUTERS          |
+| LUCAS, JAKE | SHORTEST POEMS                 |
+| LUCAS, JAKE | PAINLESS CHILD-REARING         |
+| LUCAS, JAKE | COOKING WITH MUSHROOMS         |
+| LUCAS, JAKE | HOLY GRAIL OF ORACLE           |
+| LUCAS, JAKE | BUILDING A CAR WITH TOOTHPICKS |
+| LUCAS, JAKE | BIG BEAR AND LITTLE DOVE       |
+| LUCAS, JAKE | DATABASE IMPLEMENTATION        |
+| LUCAS, JAKE | HOW TO MANAGE THE MANAGER      |
+| LUCAS, JAKE | E-BUSINESS THE EASY WAY        |
++-------------+--------------------------------+
+14 rows in set (0.00 sec)
+
+Database changed
++----------------------+------------------------+--------+
+| title                | StudioName             | Length |
++----------------------+------------------------+--------+
+| Dancing With Fools   | Oreole Productions     |    245 |
+| A Dependent's Pay    | Columbus Corporation   |    127 |
+| Ghost Man            | Parliament Productions |    127 |
+| Jura's Park          | Parliament Productions |    125 |
+| Home by Yourself     | Walt Dizzy Studios     |    125 |
+| Women in White       | Brides Day Studio      |    120 |
+| Twister Act          | Touchtones Studio      |    118 |
+| Mrs. Housefire       | Walt Dizzy Studios     |    103 |
+| An American Resident | Columbus Corporation   |    101 |
+| Home and Around      | Walt Dizzy Studios     |     85 |
++----------------------+------------------------+--------+
+10 rows in set (0.00 sec)
+
+Database changed
++----------+------------+-------------------------+
+| LastName | ISBN       | title                   |
++----------+------------+-------------------------+
+| ADAMS    | 8843172113 | DATABASE IMPLEMENTATION |
++----------+------------+-------------------------+
+1 row in set (0.00 sec)
+
+Database changed
++------------+------------+--------------+---------------+------+
+| first_name | birth_date | tool_name    | purchase_date | Age  |
++------------+------------+--------------+---------------+------+
+| ANDREW     | 1808-12-29 | Fountain Pen | 1966-02-01    |  158 |
+| ANDREW     | 1808-12-29 | Shovel       | 1967-05-10    |  159 |
+| RICHARD    | 1908-08-27 | Hack Saw     | 1969-02-14    |   61 |
+| RICHARD    | 1908-08-27 | Pliers       | 1969-10-21    |   62 |
+| GERALD     | 1913-01-09 | Golf Balls   | 1974-01-01    |   61 |
+| GERALD     | 1913-01-09 | 1st Aid Kit  | 1974-08-10    |   62 |
+| GERALD     | 1913-01-09 | 1st Aid Kit  | 1977-03-23    |   65 |
+| RONALD     | 1924-10-01 | 3/4 Wrench   | 1980-06-04    |   56 |
+| RONALD     | 1924-10-01 | Knife        | 1981-04-24    |   57 |
+| RONALD     | 1924-10-01 | Tool Chest   | 1982-11-06    |   59 |
+| GEORGE     | 1911-02-06 | Drill Bit    | 1988-09-23    |   78 |
+| GEORGE     | 1911-02-06 | Drill        | 1988-11-10    |   78 |
+| GEORGE     | 1911-02-06 | Hack Saw     | 1990-12-20    |   80 |
++------------+------------+--------------+---------------+------+
+13 rows in set (0.00 sec)
+
+Database changed
++--------------+----------------+
+| Buyer's Name | Author         |
++--------------+----------------+
+| BECCA NELSON | JANICE NELSON  |
+| BECCA NELSON | WILLIAM NELSON |
+| BECCA NELSON | LISA NELSON    |
+| BECCA NELSON | JACK NELSON    |
+| BECCA NELSON | OSCAR NELSON   |
+| BECCA NELSON | ROBERT NELSON  |
+| BECCA NELSON | ROBERT NELSON  |
++--------------+----------------+
+7 rows in set (0.00 sec)
+
++----------+-----------+----------+------------+
+| lastname | firstname | ordernum | orderdate  |
++----------+-----------+----------+------------+
+| MORALES  | BONITA    |     1003 | 2003-04-01 |
+| MORALES  | BONITA    |     1018 | 2003-04-05 |
+| THOMPSON | RYAN      |     NULL | NULL       |
+| SMITH    | LEILA     |     1006 | 2003-04-01 |
+| SMITH    | LEILA     |     1016 | 2003-04-04 |
+| PIERSON  | THOMAS    |     1008 | 2003-04-02 |
+| GIRARD   | CINDY     |     1000 | 2003-03-31 |
+| GIRARD   | CINDY     |     1009 | 2003-04-03 |
+| CRUZ     | MESHIA    |     NULL | NULL       |
+| GIANA    | TAMMY     |     1007 | 2003-04-02 |
+| GIANA    | TAMMY     |     1014 | 2003-04-04 |
+| JONES    | KENNETH   |     1020 | 2003-04-05 |
+| PEREZ    | JORGE     |     NULL | NULL       |
+| LUCAS    | JAKE      |     1001 | 2003-03-31 |
+| LUCAS    | JAKE      |     1011 | 2003-04-03 |
+| MCGOVERN | REESE     |     1002 | 2003-03-31 |
+| MCKENZIE | WILLIAM   |     NULL | NULL       |
+| NGUYEN   | NICHOLAS  |     NULL | NULL       |
+| LEE      | JASMINE   |     1013 | 2003-04-03 |
+| SCHELL   | STEVE     |     1017 | 2003-04-04 |
+| DAUM     | MICHELL   |     NULL | NULL       |
+| NELSON   | BECCA     |     1012 | 2003-04-03 |
+| MONTIASA | GREG      |     1005 | 2003-04-01 |
+| MONTIASA | GREG      |     1019 | 2003-04-05 |
+| SMITH    | JENNIFER  |     1010 | 2003-04-03 |
+| FALAH    | KENNETH   |     1004 | 2003-04-01 |
+| FALAH    | KENNETH   |     1015 | 2003-04-04 |
++----------+-----------+----------+------------+
+27 rows in set (0.00 sec)
+
++-------------------------------+----------+----------+
+| title                         | ordernum | quantity |
++-------------------------------+----------+----------+
+| PAINLESS CHILD-REARING        |     1001 |        1 |
+| HOW TO MANAGE THE MANAGER     |     1001 |        1 |
+| DATABASE IMPLEMENTATION       |     1002 |        2 |
+| DATABASE IMPLEMENTATION       |     1003 |        1 |
+| BODYBUILD IN 10 MINUTES A DAY |     1003 |        1 |
+| PAINLESS CHILD-REARING        |     1004 |        2 |
+| E-BUSINESS THE EASY WAY       |     1006 |        1 |
+| E-BUSINESS THE EASY WAY       |     1007 |        1 |
+| HOLY GRAIL OF ORACLE          |     1007 |        3 |
+| BIG BEAR AND LITTLE DOVE      |     1007 |        1 |
+| DATABASE IMPLEMENTATION       |     1007 |        1 |
+| DATABASE IMPLEMENTATION       |     1010 |        1 |
+| PAINLESS CHILD-REARING        |     1011 |        1 |
+| PAINLESS CHILD-REARING        |     1012 |        1 |
+| HANDCRANKED COMPUTERS         |     1012 |        2 |
+| BIG BEAR AND LITTLE DOVE      |     1012 |        1 |
+| DATABASE IMPLEMENTATION       |     1013 |        1 |
+| PAINLESS CHILD-REARING        |     1016 |        1 |
+| BIG BEAR AND LITTLE DOVE      |     1017 |        2 |
+| DATABASE IMPLEMENTATION       |     1018 |        1 |
++-------------------------------+----------+----------+
+20 rows in set (0.00 sec)
+

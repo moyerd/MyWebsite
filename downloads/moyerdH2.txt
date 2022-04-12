@@ -1,0 +1,39 @@
+/*Moyer Dylan 2*/
+use books;
+/*1*/
+select CONCAT(lastname, ', ',firstname) as 'Full Name', state
+from customers
+where state="nj";
+/*2*/
+select *
+from orders
+WHERE shipdate>'2003-04-1';
+/*3*/
+select *
+from books
+WHERE category!='FITNESS';
+/*4*/
+select CONCAT(lastname, ', ',firstname) as 'Full Name', state
+from customers 
+where state="ga" or state="nj"
+ORDER by 'Full name' ASC;
+/*5*/
+select Ordernum, Orderdate, Shipdate,(TO_DAYS(Shipdate) -TO_DAYS(Orderdate)) as 'Handling Orders' 
+from orders;
+/*6*/
+select * from author 
+WHERE Lname LIKE '%IN%' order by Lname DESC, Fname ASC;
+/*7*/
+SELECT concat(lastname, ', ',firstname) as FullName, referred
+from customers
+where Referred is not NULL;
+/*8*/
+select * from books 
+WHERE category in ('Children', 'Cooking');
+/*9*/
+select title 
+from books 
+WHERE title LIKE '_A_N%';
+/*10*/
+select title 
+from books where pubdate LIKE '2001%' and Category='Computer';

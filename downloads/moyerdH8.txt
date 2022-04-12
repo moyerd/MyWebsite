@@ -1,0 +1,232 @@
+/*Moyer Dylan 8*/
+/*1*/
+CREATE DATABASE IF NOT EXISTS painters;
+USE painters;
+/*2*/   
+DROP VIEW IF EXISTS myView;
+DROP VIEW IF EXISTS totalPay;
+/*3*/
+DROP INDEX full_name
+ON customer;
+DROP INDEX job_fk
+ON job;
+DROP INDEX empjob_fk
+ON empjob;
+/*4*/
+DROP TABLE IF EXISTS painters.empjob;
+DROP TABLE IF EXISTS painters.employee;
+DROP TABLE IF EXISTS painters.job;
+DROP TABLE IF EXISTS painters.customer;
+/*5 part 1*/
+CREATE TABLE customer
+(
+custphone   CHAR(12) NOT NULL UNIQUE PRIMARY KEY,
+ctype    ENUM('C','R'),
+clname   VARCHAR(35) NOT NULL,
+cfname   VARCHAR(15) NOT NULL,
+caddr     VARCHAR(40) NULL,
+ccity     VARCHAR(20) NULL,
+cstate    CHAR(2) DEFAULT 'SC'
+)
+ENGINE=INNODB;
+
+/*5 part 2*/
+
+CREATE TABLE job
+(
+jobnum   SMALLINT (5)UNSIGNED NOT NULL PRIMARY KEY,
+custphone   CHAR(12) NOT NULL UNIQUE,
+jobstartdate  DATE NULL,
+description   TEXT NULL,
+amobilled DECIMAL(7,2) NULL,
+FOREIGN KEY(custphone) REFERENCES customer(custphone)
+)
+ENGINE=INNODB;
+
+/*5 part 3*/
+
+CREATE TABLE employee
+(
+essn    CHAR(9) NOT NULL PRIMARY KEY,
+elname VARCHAR(35) NOT NULL,
+efname VARCHAR(15) NOT NULL,
+ephone VARCHAR(12) NULL,
+hrrate DECIMAL(5,2) DEFAULT 15.75
+)
+ENGINE=INNODB;
+
+/*5 part 4*/
+
+CREATE TABLE empjob
+
+(
+essn       CHAR(9) NOT NULL,
+jobnum    SMALLINT(5) UNSIGNED NOT NULL,
+hrsperjob DECIMAL(5,2) NULL,
+FOREIGN KEY(essn) REFERENCES employee(essn),
+FOREIGN KEY(jobnum) REFERENCES job(jobnum),
+PRIMARY KEY (essn,jobnum)
+)
+ENGINE=INNODB;
+
+/*6*/
+CREATE INDEX full_name
+ON customer(cfname, clname);
+
+/*7*/
+CREATE INDEX job_fk
+ON job(custphone);
+
+CREATE INDEX empjob_fk
+ON empjob(essn, jobnum);
+
+/*8*/
+CREATE USER dmoyer@localhost
+IDENTIFIED BY 'adc123';
+
+CREATE USER tkelly@localhost
+IDENTIFIED BY '803braddock';
+
+CREATE USER wkelly@localhost
+IDENTIFIED BY 'dragon1324';
+
+GRANT ALL 
+ON *.*
+TO dmoyer@localhost;
+
+GRANT SELECT
+ON painters.*
+TO tkelly@localhost;
+
+GRANT ALL
+ON painters.customer
+TO wkelly@localhost;
+
+GRANT ALL
+ON painters.job
+TO wkelly@localhost;
+
+GRANT SELECT 
+ON painters.employee
+TO wkelly@localhost;
+
+GRANT SELECT 
+ON painters.empjob
+TO wkelly@localhost;
+
+
+DROP USER dmoyer@localhost;
+DROP USER tkelly@localhost;
+DROP USER wkelly@localhost;
+
+/*9*/
+
+INSERT INTO customer
+(custphone,ctype,clname,cfname,caddr,ccity,cstate)
+VALUES
+('803 646-5555','C', 'Kelly', 'William', '321 Sad Valley St', 'Augusta', 'GA');
+
+INSERT INTO customer
+(custphone,ctype,clname,cfname,caddr,ccity,cstate)
+VALUES
+('706 634-7777','R', 'Blake', 'Tyler', '190 Cotton Ln', 'Warrenville', 'SC');
+
+INSERT INTO customer
+(custphone,ctype,clname,cfname,caddr,ccity,cstate)
+VALUES
+('803 646-5965', 'C', 'Dunkon', 'Jimmy', '471 Blueberry St', 'Santa Monica', 'CA');
+
+INSERT INTO job
+(jobnum,custphone,jobstartdate,description,amobilled)
+VALUES
+(11111,'803 646-5555','2017-01-20','OutDoor Painting',6578.66);
+
+INSERT INTO job
+(jobnum,custphone,jobstartdate,description,amobilled)
+VALUES
+(22222,'803 646-5965','2016-01-09', 'Hall Painting',6123.99);
+
+INSERT INTO job
+(jobnum,custphone,jobstartdate,description,amobilled)
+VALUES
+(33333,'706 634-7777','2018-08-20', 'Bedroom Painting', 300.00);
+
+INSERT INTO employee
+(essn,elname,efname,ephone,hrrate)
+VALUES
+('111111111', 'Bob', 'Adam', '803 223-8456', 89.55);
+
+INSERT INTO employee
+(essn,elname,efname,ephone,hrrate)
+VALUES
+('222222222', 'Sontag', 'Willy','803 656-2370',50.99);
+
+INSERT INTO employee
+(essn,elname,efname,ephone,hrrate)
+VALUES
+('333333333', 'Ruben', 'Tom', '803 570-1234', NULL);
+
+INSERT INTO empjob
+(essn, jobnum, hrsperjob)
+VALUES
+('111111111', 11111, 100.75);
+
+INSERT INTO empjob
+(essn, jobnum, hrsperjob)
+VALUES
+('222222222', 22222, 59.50);
+
+INSERT INTO empjob
+(essn, jobnum, hrsperjob)
+VALUES
+('333333333', 33333, 85.00);
+
+/*10*/
+
+UPDATE customer
+SET cfname='John'
+WHERE custphone='803 646-5555';
+
+UPDATE job
+SET description='Kitchen Painting'
+WHERE jobnum=22222;
+
+UPDATE employee
+SET hrrate=44.99
+WHERE essn='222222222';
+
+UPDATE empjob
+SET hrsperjob= 150.99
+WHERE jobnum=33333;
+
+/*11*/
+
+DELETE FROM empjob
+WHERE essn= '333333333';
+
+DELETE FROM employee
+WHERE essn= '333333333';
+
+DELETE FROM job
+WHERE jobnum= 33333;
+
+DELETE FROM customer
+WHERE custphone='803 570-1234';
+
+/*12*/
+
+CREATE VIEW myView AS
+SELECT custphone,jobnum,jobstartdate,essn
+FROM job, employee;
+
+select *
+from painters.myview;
+
+/*13*/
+
+CREATE VIEW totalPay AS
+SELECT SUM(hrsperjob*hrrate)
+FROM empjob, employee;
+
+select *
+from painters.totalPay;

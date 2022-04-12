@@ -1,0 +1,63 @@
+/*Moyer Dylan 5*/
+use books
+/*1*/
+select COUNT(*) AS 'Number of books from Cooking'
+from books
+where Category = 'Cooking';
+/*2*/
+select COUNT(*) AS 'Number of books > $30'
+from books
+where retail >= 30;
+/*3*/
+select MAX(PubDate) AS 'Most Recent Published Book'
+from books;
+/*4*/
+select MIN(Retail) AS 'least expensive book by Cus 1017'
+from orders o, orderitems oi, books b
+where o.ordernum = oi.ordernum
+and oi.ISBN = b.ISBN
+group by Customernum
+having Customernum = 1017;
+/*5*/
+select round(AVG(Retail)) AS 'Avg price of Computer books'
+from books
+where category = 'Computer';
+/*6*/
+select c.customernum, count(o.ordernum) AS NumberOfOrders
+from customers c, orders o
+where c.customernum = o.customernum
+group by customernum
+order by NumberOfOrders desc, customernum desc;
+/*7*/
+select MAX(Retail) AS "Lisa's most Expensive Book"
+from books b, bookauthor ba, author a
+where b.ISBN = ba.ISBN
+and ba.authorID = a.authorID
+and Lname = 'White'
+and Fname = 'Lisa';
+
+/*8*/
+select SUM(retail*quantity) AS 'Order Total placed by Cus 1017'
+from orders o, orderItems oi, books b
+where o.ordernum = oi.ordernum
+and oi.isbn = b.isbn
+and Customernum = 1017
+group by customernum;
+
+/*9*/
+select o.ordernum AS 'Order Number', SUM(retail*quantity) AS 'Order Total'
+from orders o, orderitems oi, books b
+where o.ordernum = oi.ordernum
+and oi.isbn = b.isbn
+group by o.ordernum;
+
+/*10*/
+select DISTINCT CONCAT(FirstName, ' ',LastName) AS FullName, SUM(retail*quantity) AS Total, c.state
+from customers c, orders o, orderitems oi, books b
+where c.customernum = o.customernum
+and o.ordernum = oi.ordernum
+and oi.isbn = b.isbn
+and c.state in ("GA","FL")
+group by LastName
+having Total > 80
+order by LastName;

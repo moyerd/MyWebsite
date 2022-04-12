@@ -1,0 +1,56 @@
+#Carousel {
+	width:90%;
+	margin: 0 auto;
+	padding-top: 20px;
+	margin-bottom: 20px;
+}
+#Carousel2 {
+	max-width: 13.5em;
+	margin: 0 auto;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+.card-deck{
+	max-width:90%;
+}
+.row{
+	margin-right:0px;
+}
+.jumbotron{
+	margin-bottom: 10px;
+}
+.table{
+	margin: 0 auto;
+	max-width: 90%;
+}
+.card-deck{
+	margin: 0 auto;
+}
+#Form{
+	max-width: 75%;
+}
+#Header, #Main, #Footer {
+	margin: 0;
+	padding: 0;
+}
+
+#Footer {
+	position: relative;
+	bottom: 0;
+}
+
+@media only screen and (max-width:544px) {
+	#Carousel {
+	width:100%;}
+}
+
+@media only screen and (min-width:992px) {
+	#Carousel {
+		width:60%;
+	}
+}
+@media only screen and (min-width:1440px) {
+	#Carousel {
+		width:40%;
+	}
+}
